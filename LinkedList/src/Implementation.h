@@ -1,11 +1,15 @@
+#include <stdlib.h>
 #include <stdio.h>
 
 struct Node {
-    void* Data;
+    int Data;
     struct Node* Next;
 };
 
 struct LinkedList {
     struct Node* Head;
 };
+
+struct Node* CreateNode();
+void AddToLinkedList(struct LinkedList* list, int value);
 
