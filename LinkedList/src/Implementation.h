@@ -10,6 +10,7 @@ struct LinkedList {
     struct Node* Head;
 };
 
+struct LinkedList* CreateLinekdList();
 struct Node* CreateNode();
 void AddToLinkedList(struct LinkedList* list, int value);
 
