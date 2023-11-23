@@ -1,3 +1,4 @@
 
-src/*.out
-src/*.gch
+*.out
+*.gch
+*.elf
