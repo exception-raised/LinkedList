@@ -16,12 +16,14 @@ struct LinkedTuple {
     int Index;
 };
 
+
 typedef struct LinkedList* LinkedList;
 typedef struct Node* Node;
 
 LinkedList CreateLinkedList(int value);
 Node CreateNode();
 void AddToLinkedList(LinkedList list, int value);
+void InsertFront(LinkedList list, int value);
 void DeleteFromEndOfList(LinkedList list);
 bool SanityCheckList(LinkedList list);
 struct LinkedTuple Find(LinkedList list, int value);
