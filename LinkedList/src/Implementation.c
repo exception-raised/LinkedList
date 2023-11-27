@@ -29,9 +29,20 @@ void AddToLinkedList(LinkedList list, int value) {
     CurrentNode->Next->Data = value;
 }
 
-// Create a helper function to reach end of list.
+// TODO: Create ENUM for where to insert, implement the functions and use a switch case to call the appropriate functions.
+
+void InsertFront(LinkedList list, int value){
+    if (!SanityCheckList(list)) {
+        printf("%s\n", "Cannot remove Node from empty list.");
+        return;
+    }
+
+    list->Head = CreateNode();
+    list->Head->Data = value;
+}
+
 void DeleteFromEndOfList(LinkedList list) {
-    if (list == NULL || list->Head == NULL) {
+    if (!SanityCheckList(list)) {
         // Handle empty list
         printf("%s\n", "Cannot remove Node from empty list.");
         return;

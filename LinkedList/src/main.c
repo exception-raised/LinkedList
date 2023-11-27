@@ -15,6 +15,8 @@ int main(){
     //DeleteFromEndOfList(List);
     printf("%d\n", List->Head->Next->Next == NULL);
     struct LinkedTuple s = Find(List, 30);
-    printf("%d", s.Index);
+    printf("%d\n", s.Index);
+    InsertFront(List, 60);
+    printf("%d\n", List->Head->Data);
     return 0;
 }
