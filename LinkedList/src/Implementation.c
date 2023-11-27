@@ -21,6 +21,10 @@ LinkedList CreateLinkedList(int value) {
 }
 
 void AddToLinkedList(LinkedList list, int value) {
+    if (!SanityCheckList(list)) {
+        printf("%s\n", "Cannot remove Node from empty list.");
+        return;
+    }
     Node CurrentNode = list->Head;
     while (CurrentNode->Next != NULL) {
         CurrentNode = CurrentNode->Next;
