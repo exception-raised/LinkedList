@@ -21,7 +21,7 @@ LinkedList CreateLinkedList(int value) {
 }
 
 void AddToLinkedList(LinkedList list, int value) {
-    if (!IsEmpty(list)) {
+    if (IsEmpty(list)) {
         printf("%s\n", "Cannot remove Node from empty list.");
         return;
     }
@@ -34,7 +34,7 @@ void AddToLinkedList(LinkedList list, int value) {
 }
 
 void InsertFront(LinkedList list, int value){
-    if (!IsEmpty(list)) {
+    if (IsEmpty(list)) {
         printf("%s\n", "Cannot remove Node from empty list.");
         return;
     }
@@ -44,7 +44,7 @@ void InsertFront(LinkedList list, int value){
 }
 
 void DeleteFromEndOfList(LinkedList list) {
-    if (!IsEmpty(list)) {
+    if (IsEmpty(list)) {
         // Handle empty list
         printf("%s\n", "Cannot remove Node from empty list.");
         return;
@@ -70,16 +70,16 @@ void DeleteFromEndOfList(LinkedList list) {
 
 bool IsEmpty(LinkedList list){
     if(list == NULL || list->Head == NULL){
-        return false;
+        return true;
     }
-    return true;
+    return false;
 }
 
 struct LinkedTuple Find(LinkedList list, int value){
     struct LinkedTuple result;
     result.Index = -1;
     result.Node = NULL;
-    if(!IsEmpty(list)){
+    if(IsEmpty(list)){
         printf("%s\n", "Invalid List.");
         return result;
     }
@@ -99,7 +99,7 @@ struct LinkedTuple Find(LinkedList list, int value){
 }
 
 int SizeOfList(LinkedList list){
-    if(!IsEmpty(list)){
+    if(IsEmpty(list)){
         printf("%s\n", "Invalid List.");
     }
     int result = 1; // We already know the Head exists. Counting it twice is redundant.
