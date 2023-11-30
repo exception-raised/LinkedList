@@ -25,5 +25,6 @@ Node CreateNode();
 void AddToLinkedList(LinkedList list, int value);
 void InsertFront(LinkedList list, int value);
 void DeleteFromEndOfList(LinkedList list);
-bool SanityCheckList(LinkedList list);
+bool IsEmpty(LinkedList list);
 struct LinkedTuple Find(LinkedList list, int value);
+int SizeOfList(LinkedList list);

@@ -18,5 +18,11 @@ int main(){
     printf("%d\n", s.Index);
     InsertFront(List, 60);
     printf("%d\n", List->Head->Data);
+
+    struct LinkedList* List2 = CreateLinkedList(0);
+    AddToLinkedList(List2, 1);
+    AddToLinkedList(List2, 2);
+    AddToLinkedList(List2, 3);
+    printf("Size: %d\n", SizeOfList(List2));
     return 0;
 }
