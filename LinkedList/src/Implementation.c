@@ -61,7 +61,6 @@ void DeleteFromEndOfList(LinkedList list) {
         CurrentNode = CurrentNode->Next;
     }
 
-    // If previous is still NULL, it means there is only one node in the list
     if (PreviousNode == NULL) {
         free(list->Head);
         list->Head = NULL;
