@@ -28,3 +28,4 @@ void DeleteFromEndOfList(LinkedList list);
 bool IsEmpty(LinkedList list);
 struct LinkedTuple Find(LinkedList list, int value);
 int SizeOfList(LinkedList list);
+void DestroyList(LinkedList list);
