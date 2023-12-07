@@ -26,7 +26,6 @@ jobs:
 
     - name: Build and test
       run: |
-        ls -la
-        cd DSA
+        cd LinkedList
         make test
         ./LinkedListTests --verbose
