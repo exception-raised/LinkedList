@@ -13,8 +13,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up CMake
-      uses: actions/setup-cmake@v2
+    - name: CMake Action
+      uses: threeal/cmake-action@v1.3.0
       with:
         cmake-version: '3.27.9' 
 
