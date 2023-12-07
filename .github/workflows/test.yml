@@ -1,9 +1,10 @@
 name: Run Tests
 
 on:
-  on_pull_request:
+  pull_request:
     branches:
       - main
+
 
 jobs:
   build:
