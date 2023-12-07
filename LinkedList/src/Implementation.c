@@ -38,13 +38,14 @@ void AddToLinkedList(LinkedList list, int value) {
 
 void InsertFront(LinkedList list, int value){
     if (IsEmpty(list)) {
-    if (IsEmpty(list)) {
-        printf("%s\n", "Cannot remove Node from empty list.");
+        printf("%s\n", "Cannot insert at the front of an empty list.");
         return;
     }
 
-    list->Head = CreateNode();
-    list->Head->Data = value;
+    Node newHead = CreateNode();
+    newHead->Data = value;
+    newHead->Next = list->Head;
+    list->Head = newHead;
 }
 
 void DeleteFromEndOfList(LinkedList list) {
@@ -73,9 +74,7 @@ void DeleteFromEndOfList(LinkedList list) {
 bool IsEmpty(LinkedList list){
     if(list == NULL || list->Head == NULL){
         return true;
-        return true;
     }
-    return false;
     return false;
 }
 
@@ -105,10 +104,7 @@ struct LinkedTuple Find(LinkedList list, int value) {
     return result;
 }
 
-
-
-int SizeOfList(LinkedList list){
-    if(IsEmpty(list)){
+int SizeOfList(LinkedList list) {
     if(IsEmpty(list)){
         printf("%s\n", "Invalid List.");
         return -1;

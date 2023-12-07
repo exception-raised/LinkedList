@@ -1,9 +1,10 @@
 name: Run Tests
 
 on:
-  on_pull_request:
+  pull_request:
     branches:
       - main
+
 
 jobs:
   build:
@@ -25,5 +26,7 @@ jobs:
 
     - name: Build and test
       run: |
-        make test
+        cd LinkedList
+        make tests-github
         ./LinkedListTests --verbose
+        rm ./LinkedListTests
