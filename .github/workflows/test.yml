@@ -27,5 +27,7 @@ jobs:
     - name: Build and test
       run: |
         cd LinkedList
-        make test
+        make tests-github
         ./LinkedListTests --verbose
+        ls
+        rm ./LinkedListTests
