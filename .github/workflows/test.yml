@@ -29,5 +29,4 @@ jobs:
         cd LinkedList
         make tests-github
         ./LinkedListTests --verbose
-        ls
         rm ./LinkedListTests
