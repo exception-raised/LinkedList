@@ -113,7 +113,7 @@ int SizeOfList(LinkedList list){
         printf("%s\n", "Invalid List.");
         return -1;
     }
-    int result = 1; // We already know the Head exists. Counting it twice is redundant.
+    int result = 1; //We already know the Head exists. Counting it twice is redundant.
     Node CurrentNode = list->Head->Next;
     while(CurrentNode != NULL){
         CurrentNode = CurrentNode->Next;
