@@ -29,3 +29,5 @@ jobs:
         cd LinkedList
         make test
         ./LinkedListTests --verbose
+        ls
+        rm ./LinkedListTests
